@@ -1,11 +1,11 @@
 {
-  "name": "skillup-proj",
+  "name": "kirizey-themes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build-project": "rm -rf build/ && gulp dev:build-project"
+    "build-project": "rm -rf white-theme-build/ && gulp dev:white-theme-build-project"
   },
   "keywords": [],
   "author": "",
