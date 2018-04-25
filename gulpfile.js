@@ -9,21 +9,21 @@ var gulp = require("gulp"),
 /* general tasks */
 gulp.task("dev:server", function() {
   browserSync.init({
-    server: "./build/"
+    server: "./white-theme-build/"
   });
 
-  gulp.watch("build/**/*.html").on("change", browserSync.reload);
-  gulp.watch("build/**/*.css").on("change", browserSync.reload);
+  gulp.watch("white-theme-build/**/*.html").on("change", browserSync.reload);
+  gulp.watch("white-theme-build/**/*.css").on("change", browserSync.reload);
 
-  gulp.watch("src/assets/**/*.*", ["dev:build-assets"]);
+  gulp.watch("src/assets/**/*.*", ["dev:white-theme-build-assets"]);
 });
 
-gulp.task("dev:build-assets", function() {
-  return gulp.src("src/assets/**/*.*").pipe(gulp.dest("build/assets/"));
+gulp.task("dev:white-theme-build-assets", function() {
+  return gulp.src("src/assets/**/*.*").pipe(gulp.dest("white-theme-build/assets/"));
 });
 
 /* tasks for pages */
-gulp.task("dev:build-index-pug", function() {
+gulp.task("dev:white-theme-build-index-pug", function() {
   return gulp
     .src("src/index.pug")
     .pipe(plumber())
@@ -32,39 +32,39 @@ gulp.task("dev:build-index-pug", function() {
         pretty: true
       })
     )
-    .pipe(gulp.dest("build/index/"))
+    .pipe(gulp.dest("white-theme-build/index/"))
     .pipe(browserSync.stream());
 });
-gulp.task("dev:build-index-scss", function() {
+gulp.task("dev:white-theme-build-index-scss", function() {
   return gulp
     .src("src/index.scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest("build/index/"))
+    .pipe(gulp.dest("white-theme-build/index/"))
     .pipe(browserSync.stream());
 });
 
 gulp.task("watch:index", function() {
-  gulp.watch("src/components/**/*.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/components/**/*.scss", ["dev:build-index-scss"]);
-  gulp.watch("src/index.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/index.scss", ["dev:build-index-scss"]);
-  gulp.watch("src/shared/**/*.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/shared/**/*.scss", ["dev:build-index-scss"]);
+  gulp.watch("src/components/**/*.pug", ["dev:white-theme-build-index-pug"]);
+  gulp.watch("src/components/**/*.scss", ["dev:white-theme-build-index-scss"]);
+  gulp.watch("src/index.pug", ["dev:white-theme-build-index-pug"]);
+  gulp.watch("src/index.scss", ["dev:white-theme-build-index-scss"]);
+  gulp.watch("src/shared/**/*.pug", ["dev:white-theme-build-index-pug"]);
+  gulp.watch("src/shared/**/*.scss", ["dev:white-theme-build-index-scss"]);
 
   // переместить потом отдельно
-  gulp.watch("src/shared/layout/**/*.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/shared/layout/**/*.scss", ["dev:build-index-scss"]);
+  gulp.watch("src/shared/layout/**/*.pug", ["dev:white-theme-build-index-pug"]);
+  gulp.watch("src/shared/layout/**/*.scss", ["dev:white-theme-build-index-scss"]);
 });
 
 /* watch on all pages */
 gulp.task("watch", ["watch:index"]);
 
 /* task for build project */
-gulp.task("dev:build-project", [
-  "dev:build-assets",
-  "dev:build-index-pug",
-  "dev:build-index-scss"
+gulp.task("dev:white-theme-build-project", [
+  "dev:white-theme-build-assets",
+  "dev:white-theme-build-index-pug",
+  "dev:white-theme-build-index-scss"
 ]);
 
-gulp.task("default", ["dev:build-project", "watch", "dev:server"]);
+gulp.task("default", ["dev:white-theme-build-project", "watch", "dev:server"]);
