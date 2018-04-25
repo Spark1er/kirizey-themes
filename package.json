@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build-project": "rm -rf build/ && gulp dev:build-project"
+    "build-project": "rm -rf black-theme-build/ && gulp dev:black-theme-build-project"
   },
   "keywords": [],
   "author": "",
