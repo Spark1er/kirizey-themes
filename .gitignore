@@ -1,5 +1,7 @@
 # compiled output
+/build
 /white-theme-build
+/black-theme-build
 
 # dependencies
 /node_modules
