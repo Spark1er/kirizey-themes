@@ -2,4 +2,81 @@ $disabled-color-text: #dfdfdf;
 $primary-color: rgb(26, 126, 160);
 $link-width: 150px;
 $default-background-color: #f3f3f3;
-$black: #fefefe;
+$black: #383838;
+$btn-height: 40px;
+$btn-width: 80px;
+
+@mixin btn-size() {
+  width: $btn-width;
+  height: $btn-height;
+}
+@mixin container-size($bg-color, $width, $color) {
+  width: $width;
+  background-color: $bg-color;
+  color: $color;
+  height: $btn-height;
+}
+@mixin btn() {
+  &_red {
+    @include btn-size();
+    &_container-size button {
+      @include container-size(red, 100%, #fefefe);
+    }
+    &_content-size button {
+      @include container-size(red, auto, #fefefe);
+    }
+  }
+  &_primary {
+    @include btn-size();
+    &_container-size button {
+      @include container-size($primary-color, 100%, #fefefe);
+    }
+    &_content-size button {
+      @include container-size($primary-color, auto, #fefefe);
+    }
+  }
+  &_green {
+    @include btn-size();
+    &_container-size button {
+      @include container-size(green, 100%, #fefefe);
+    }
+    &_content-size button {
+      @include container-size(green, auto, #fefefe);
+    }
+  }
+  &_outline {
+    &_red {
+      @include btn-size();
+      &_container-size button {
+        @include container-size(rgb(255, 255, 255), 100%, red);
+        border: 2px solid red;
+      }
+      &_content-size button {
+        @include container-size(rgb(255, 255, 255), auto, red);
+        border: 2px solid red;
+      }
+    }
+    &_primary {
+      @include btn-size();
+      &_container-size button {
+        @include container-size(rgb(255, 255, 255), 100%, $primary-color);
+        border: 2px solid $primary-color;
+      }
+      &_content-size button {
+        @include container-size(rgb(255, 255, 255), auto, $primary-color);
+        border: 2px solid $primary-color;
+      }
+    }
+    &_green {
+      @include btn-size();
+      &_container-size button {
+        @include container-size(rgb(255, 255, 255), 100%, green);
+        border: 2px solid green;
+      }
+      &_content-size button {
+        @include container-size(rgb(255, 255, 255), auto, green);
+        border: 2px solid green;
+      }
+    }
+  }
+}
