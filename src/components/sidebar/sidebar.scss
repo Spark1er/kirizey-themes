@@ -1,3 +1,19 @@
-.container{
-    width: 300px;
+@import "../../_vars.scss";
+
+.container {
+  width: 300px;
+  .sidebar {
+    width: 50px;
+    &__triangle {
+      @include triangle( 50px, $primary-color);
+    }
+    &__title{
+      &_upper{
+        text-transform: uppercase;
+      }
+      &_italic{
+        font-style: italic;
+      }
+    }
+  }
 }
