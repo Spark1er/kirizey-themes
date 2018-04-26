@@ -1,0 +1,123 @@
+@import "./_vars.scss";
+
+@mixin linky() {
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 38px;
+  display: table-cell;
+  width: $link-width;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: Oswald, Tahoma;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  font-weight: bold;
+  &__brand {
+    padding-left: 90px;
+    color: $primary-color;
+    font-size: 30px;
+  }
+  &__link {
+    @include linky();
+    color: #494949;
+    background-color: $default-background-color;
+
+    &_active {
+      @include linky();
+      color: #fefefe;
+      background-color: $primary-color;
+    }
+    &_disable {
+      @include linky();
+      color: $disabled-color-text;
+      background-color: $default-background-color;
+    }
+    &:hover {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.container {
+  width: 300px;
+  .card {
+    margin: 50px;
+
+    &__header {
+      &_upper {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+      &_bold {
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+    }
+    &__content {
+      &_right {
+        text-align: right;
+        padding-bottom: 10px;
+      }
+      &_upper {
+        text-transform: uppercase;
+        padding-bottom: 10px;
+      }
+    }
+    &__control {
+      @include btn();
+    }
+  }
+}
+
+.footer {
+  &__social {
+    background-color: #4e71f8;
+    padding: 50px;
+    text-transform: uppercase;
+    a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+    }
+  }
+  &__copyright {
+    background-color: #3e5ac7;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }
+}
+
+.container {
+  width: 300px;
+  .sidebar {
+    width: 50px;
+    &__triangle {
+      @include triangle(50px, $primary-color);
+    }
+    &__title {
+      &_upper {
+        text-transform: uppercase;
+      }
+      &_italic {
+        font-style: italic;
+      }
+    }
+  }
+}
