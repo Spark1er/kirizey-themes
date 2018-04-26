@@ -49,8 +49,7 @@ gulp.task("watch:index", function() {
   gulp.watch("src/components/**/*.scss", ["dev:build-index-scss"]);
   gulp.watch("src/index.pug", ["dev:build-index-pug"]);
   gulp.watch("src/index.scss", ["dev:build-index-scss"]);
-  gulp.watch("src/shared/**/*.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/shared/**/*.scss", ["dev:build-index-scss"]);
+  gulp.watch("src/_vars.scss", ["dev:build-index-scss"]);
 });
 
 /* watch on all pages */
