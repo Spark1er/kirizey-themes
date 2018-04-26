@@ -51,10 +51,6 @@ gulp.task("watch:index", function() {
   gulp.watch("src/index.scss", ["dev:build-index-scss"]);
   gulp.watch("src/shared/**/*.pug", ["dev:build-index-pug"]);
   gulp.watch("src/shared/**/*.scss", ["dev:build-index-scss"]);
-
-  // переместить потом отдельно
-  gulp.watch("src/shared/layout/**/*.pug", ["dev:build-index-pug"]);
-  gulp.watch("src/shared/layout/**/*.scss", ["dev:build-index-scss"]);
 });
 
 /* watch on all pages */

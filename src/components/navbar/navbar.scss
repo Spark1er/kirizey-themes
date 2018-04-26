@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: Oswald, Tahoma;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  text-decoration: none;
+  font-weight: bold;
+  &__brand {
+      padding-left: 90px;
+      color: lightblue;
+      font-size: 30px;
+  }
+  &__link {
+    text-align: center;
+    color: #494949;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #f3f3f3;
+    line-height: 38px;
+    border: 1px solid #e7e7e7;
+    display: table-cell;
+    width: 200px;
+    &_active {
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 38px;
+      display: table-cell;
+      color: #fefefe;
+      text-decoration: none;
+      background-color: #00c04f;
+      border: 1px solid #00c04f;
+      width: 200px;
+    }
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(255, 255, 255);
+    }
+  }
+}
