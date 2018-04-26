@@ -50,7 +50,6 @@ gulp.task("watch:index", function() {
   gulp.watch("src/index.scss", ["dev:build-index-scss"]);
   gulp.watch("src/_vars.scss", ["dev:build-index-scss"]);
   gulp.watch("src/white-theme.scss", ["dev:build-index-scss"]);
-  
 });
 
 /* watch on all pages */
