@@ -1,0 +1,36 @@
+@import "../../_vars.scss";
+
+.container {
+  width: 300px;
+  .card {
+    margin: 50px;
+
+    &__header {
+      &_upper {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+      &_bold {
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+    }
+    &__content {
+      &_right {
+        text-align: right;
+        padding-bottom: 10px;
+      }
+      &_upper {
+        text-transform: uppercase;
+        padding-bottom: 10px;
+      }
+    }
+    &__control {
+      @include btn();
+    }
+  }
+}
