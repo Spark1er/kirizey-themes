@@ -81,7 +81,7 @@ $btn-width: 80px;
   }
 }
 
-@mixin triangle($size, $color) {
+@mixin triangle($size) {
   &_up {
     &_primary {
       border-bottom: $size solid $primary-color;

@@ -51,8 +51,8 @@ body {
 }
 
 .container {
-  width: 300px;
   .card {
+    width: 800px;
     margin: 50px;
 
     &__header {
@@ -87,7 +87,7 @@ body {
 
 .footer {
   &__social {
-    background-color: #4e71f8;
+    background-color: $primary-color;
     padding: 50px;
     text-transform: uppercase;
     a {
@@ -97,7 +97,7 @@ body {
     }
   }
   &__copyright {
-    background-color: #3e5ac7;
+    background-color: rgb(23, 110, 139);
     text-align: center;
     padding: 10px;
     color: white;
@@ -105,19 +105,28 @@ body {
 }
 
 .container {
-  width: 300px;
   .sidebar {
     width: 50px;
+    margin-bottom: 20px;
     &__triangle {
-      @include triangle(50px, $primary-color);
+      @include triangle(50px);
     }
     &__title {
       &_upper {
         text-transform: uppercase;
+        margin-bottom: 5px;
       }
       &_italic {
         font-style: italic;
+        margin-bottom: 5px;
       }
     }
+  }
+}
+
+.box {
+  white-space: nowrap;
+  .container {
+    display: inline-block;
   }
 }
