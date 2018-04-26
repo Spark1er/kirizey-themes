@@ -1,0 +1,51 @@
+@import "../../_vars.scss";
+
+@mixin linky() {
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 38px;
+  display: table-cell;
+  width: $link-width;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: Oswald, Tahoma;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  font-weight: bold;
+  &__brand {
+    padding-left: 90px;
+    color: $primary-color;
+    font-size: 30px;
+  }
+  &__link {
+    @include linky();
+    color: #494949;
+    background-color: $default-background-color;
+
+    &_active {
+      @include linky();
+      color: #fefefe;
+      background-color: $primary-color;
+    }
+    &_disable {
+      @include linky();
+      color: $disabled-color-text;
+      background-color: $default-background-color;
+    }
+    &:hover {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
