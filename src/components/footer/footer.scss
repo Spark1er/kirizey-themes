@@ -1,0 +1,20 @@
+@import "../../_vars.scss";
+
+.footer {
+  &__social {
+    background-color: #4e71f8;
+    padding: 50px;
+    text-transform: uppercase;
+    a {
+      color: white;
+      text-decoration: none;
+      padding-right: 40px;
+    }
+  }
+  &__copyright {
+    background-color: #3e5ac7;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }
+}
