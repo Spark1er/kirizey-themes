@@ -10,3 +10,11 @@ html(lang="en")
     link(rel="stylesheet", href=`./${cssLink}.css`)
   body
     block content   
+      include ./components/navbar/navbar.pug
+      .box
+        include ./components/card/card.pug
+        include ./components/sidebar/sidebar.pug
+      include ./components/footer/footer.pug
+      
+      
+        
