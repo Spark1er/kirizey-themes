@@ -24,6 +24,7 @@ body {
   display: table;
   table-layout: fixed;
   font-weight: bold;
+  background-color: $default-background-color;
   &__brand {
     padding-left: 90px;
     color: $primary-color;
