@@ -13,7 +13,7 @@
 body {
   width: 100%;
   margin: 0;
-  background-color: #f7f7f7;
+  background-color: rgb(124, 124, 124);
   font-family: Oswald, Tahoma;
 }
 .navbar {
@@ -24,28 +24,30 @@ body {
   display: table;
   table-layout: fixed;
   font-weight: bold;
+  background-color: $black-background-color;
   &__brand {
     padding-left: 90px;
-    color: $primary-color;
+    color: white;
     font-size: 30px;
   }
   &__link {
     @include linky();
-    color: #494949;
-    background-color: $default-background-color;
+    color: white;
+    background-color: $black-background-color;
 
     &_active {
       @include linky();
-      color: #fefefe;
-      background-color: $primary-color;
+      color: $black-background-color;
+      background-color: white;
     }
     &_disable {
       @include linky();
-      color: $disabled-color-text;
-      background-color: $default-background-color;
+      color: rgba(255, 255, 255, 0.452);
+      background-color: $black-background-color;
     }
     &:hover {
       background-color: rgb(255, 255, 255);
+      color: $black-background-color;
     }
   }
 }
@@ -54,7 +56,7 @@ body {
   .card {
     width: 800px;
     margin: 50px;
-
+    color: white;
     &__header {
       &_upper {
         text-transform: uppercase;
@@ -87,7 +89,7 @@ body {
 
 .footer {
   &__social {
-    background-color: $primary-color;
+    background-color: rgb(100, 100, 100);
     padding: 50px;
     text-transform: uppercase;
     a {
@@ -97,7 +99,7 @@ body {
     }
   }
   &__copyright {
-    background-color: rgb(23, 110, 139);
+    background-color: $black-background-color;
     text-align: center;
     padding: 10px;
     color: white;
@@ -105,6 +107,7 @@ body {
 }
 
 .container {
+  color: white;
   .sidebar {
     width: 50px;
     margin-bottom: 20px;

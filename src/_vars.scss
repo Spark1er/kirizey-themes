@@ -5,6 +5,7 @@ $default-background-color: #f3f3f3;
 $black: #383838;
 $btn-height: 40px;
 $btn-width: 80px;
+$black-background-color:#383B43;
 
 @mixin btn-size() {
   width: $btn-width;
